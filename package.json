@@ -1,0 +1,19 @@
+{
+  "name": "fieldservice-key-cutover",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types src/field_service_gateway.ts",
+    "rotate": "node --experimental-strip-types src/key_cutover.ts",
+    "test": "node --experimental-strip-types --test test/cutover_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
